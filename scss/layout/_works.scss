@@ -1,0 +1,97 @@
+.works {
+    .container {
+        height: auto;
+        padding: 2rem 8.5rem;
+        margin-bottom: 20rem;
+        @include responsive(table){
+         padding: 2rem 2.5rem;   
+        }
+    }
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {font-family:$secondary-font-family;
+        font-size: $h4-size;
+        line-height: $h4-line-height;
+        color: $grey; 
+        @include responsive(m-table){
+           text-align: center;
+           margin-bottom: 8rem;
+        }           
+    }
+    &__list {
+        display: flex;
+        gap: 9.5rem;
+        @include responsive(desktop){
+            gap: 6rem;
+        }
+        @include responsive(table){
+            gap: 1rem;
+        }
+        @include responsive(m-table){
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        li {
+            width: 28.5rem;
+            margin-bottom: 6.4rem;
+            @include responsive(table){
+                width: 22.3rem;
+            }
+        }
+    }
+    &__item-title {
+        font-family: $secondary-font-family;
+        font-size: $h1-size;
+        line-height: $h1-line-height;
+        color: $pale-orange;
+        margin-bottom: 3.8rem;
+    }
+    &__item-subtitle {
+        width: 25.5rem;
+        font-family: $secondary-font-family;
+        font-size: $h3-size;
+        line-height: $h3-line-height;
+        color: $secondary-color;
+        margin-bottom: 4.2rem;
+    }
+    &__line {
+        width:72%;
+        height: 5px;
+        background-color: $pale-orange;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 9.5rem 0px;
+        @include responsive(m-table){
+            display: none;
+        }
+        span{
+            width: 4rem;
+            height: 4rem;
+            border: 1px solid $primary-color;
+            border-radius: 50%;
+            background-color: $Light-Cream-BG;           
+          }
+         }
+         
+    &__btn {
+           @extend %btn-fonts;
+            padding: 1.5rem 3.2rem;
+            background-color: $primary-color;
+            border-radius: 1rem;
+
+    }
+    .btn {
+        @include responsive(m-table) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+   
+
+}
+

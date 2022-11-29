@@ -1,0 +1,102 @@
+.our_collection {
+      .container {
+        @include responsive(desktop) {
+            padding: 0px 2.5rem;
+        }
+        @include responsive(m-table) {
+            padding: 0px 1rem;
+        }
+      }
+    &__list {
+        margin: auto;
+        margin-bottom: 12rem;
+        padding:5rem 0px;
+        height: 53rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        background-image: url(../images/png/our\ c\ all.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center -7rem;
+        width: 100%;
+        @include responsive(desktop) { 
+            width: 100%;    
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            justify-content: center;
+            align-items: center;         
+        }
+        @include responsive(table) { 
+            background-position: center -5rem;
+        }
+        @include responsive(m-table) {
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr ;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-position: center -20px;
+        }
+        @include responsive(phone) {
+            background-position: center -7;
+        }
+        @include responsive(m-phone) {
+            background-position: center 0;       
+        &__about {
+            width: 100%
+        }
+        
+}}
+&__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    width: 25.5rem;
+    img {
+        margin-bottom: 7.2rem;
+    }
+    @include responsive(desktop) {
+        width: 100%;
+    }
+    @include responsive(m-table) {
+       justify-content: center;
+    }
+    @include responsive(table) {
+        width: 100%;
+    }
+    
+    
+    @include responsive(m-table) {
+        flex-direction: row;
+    }
+    @include responsive(phone) {
+        flex-direction: column;
+    }
+ }
+ &__wrapper  {
+    width: 25.6rem;
+    text-align: center;
+    h2 {
+        font-family: $secondary-font-family;
+        font-size: $h4-size;
+        line-height: $h4-line-height;
+        color: $secondary-color;
+        margin-bottom: 2.4rem;
+     }
+    @include responsive(desktop) {
+        width: 100%;
+    }
+    @include responsive(table) {
+        width: 100%;
+    }
+    @include responsive(m-table) {
+        width: 100%
+        }
+    }
+        
+}

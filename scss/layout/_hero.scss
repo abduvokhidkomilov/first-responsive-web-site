@@ -1,0 +1,81 @@
+.hero {
+    .container {
+        @include responsive(desktop) {
+            padding: 0px 2.5rem;
+        }
+        @include responsive(m-table) {
+            padding: 0px 1rem;
+        }
+    }
+    &__container {
+        height: 60rem;
+        background-color: $grey;
+        background-image:url(../images/jpg/bitmap.jpg);
+        border-radius:1rem ;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding:11.6rem 8.5rem  ;
+        margin-bottom: 13.6rem;
+        @include responsive(m-table) {
+            margin-bottom:9rem;
+         }
+        @include responsive(m-table) {
+            height: auto;
+            padding: 9rem 5.5rem;
+            margin-bottom:7rem;
+         }
+         @include responsive(m-phone) {
+            height: auto;
+            padding: 9rem 1.5rem;
+            margin-bottom: 5rem;
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/jpg/bitmap.jpg);
+        }
+           
+         }
+         
+    }
+    
+    .text_wrapper {
+        width: 49.3rem;
+        @include responsive(phone) {
+            width: 100%;
+            height: auto;
+         }
+         @include responsive(m-phone) {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            
+         }
+        @extend %text-fonts;
+        a {
+            @extend %btn-fonts;
+            padding: 1.5rem 3.2rem;
+            background-color: $primary-color;
+            border-radius: 1rem;
+
+        }
+    }
+    
+    .text-wrap {
+        width: 40rem;
+        margin-bottom: 4rem;
+        @include responsive(phone) {
+            width: 25rem;
+         }
+         @include responsive(m-phone) {
+            text-align: center;
+            width: inherit;
+         }
+         &__title {
+            margin-bottom: 3.2rem;
+            @extend %title-fonts;
+            
+             @include responsive(phone) {
+                font-size: $h2-size;
+                margin-bottom: 2rem;
+             }
+    }
+    
+}

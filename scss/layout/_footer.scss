@@ -1,0 +1,45 @@
+.footer {
+    background-color:  $secondary-color;
+    .container {
+        height: auto;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 47px 0px;
+        @include responsive(m-table) {
+            flex-direction: column;
+            padding: 5.5rem 0px;
+        } 
+
+    }
+    &__list {
+        display: flex;
+        gap: 3rem;
+        margin-left: -20rem;
+        @include responsive(desktop) {
+          margin: 0px;  
+        } 
+        @include responsive(m-table) {
+            padding: 3.3rem 0px 6.7rem 0px;
+        } 
+        @include responsive(phone) {
+            flex-direction: column;
+            text-align: center;
+            gap: 2.4rem; 
+            padding: 5rem 0px;
+            
+        } 
+        a {
+            color: $grey;
+        }
+    }
+    &__link {
+        color: $Light-Cream-BG;
+        @extend %ancer-fonts;
+    }
+    &__icon:not(:last-child) {
+        margin-right: 2.4rem;
+    }
+    
+}
